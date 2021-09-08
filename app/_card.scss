@@ -1,0 +1,175 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  margin: 4rem 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+
+  &__img {
+    background-color: #d6e1ff;
+    img {
+      display: block;
+      width: 100%;
+      border-top-right-radius: 1.5rem;
+      border-top-left-radius: 1.5rem;
+    }
+  }
+
+  &__summary {
+    h1 {
+      color: var(--n-dark-blue);
+      padding-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    p {
+      color: var(--n-desaturated-blue);
+      padding: 1rem 0rem;
+      margin: 0rem 2rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--n-very-pale-blue);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      img {
+        margin-right: 1rem;
+      }
+    }
+
+    &-content {
+      padding-right: 3rem;
+      font-size: 0.9rem;
+      p:first-child {
+        color: var(--n-dark-blue);
+        font-weight: 600;
+      }
+
+      p:last-child {
+        padding-top: 0.2rem;
+      }
+
+      p {
+        color: var(--n-desaturated-blue);
+      }
+    }
+
+    &-change {
+      button {
+        font-family: inherit;
+        font-weight: 700;
+        text-decoration: underline;
+        cursor: pointer;
+        color: var(--p-bright-blue);
+        background-color: transparent;
+        border: none;
+        transition: all 0.2 ease;
+
+        &:hover {
+          opacity: 0.8;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0rem;
+    button {
+      padding: 1rem 4.5rem;
+      margin-top: 0.8rem;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.9rem;
+      background-color: transparent;
+      color: var(--n-desaturated-blue);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: var(--n-dark-blue);
+      }
+    }
+
+    button:first-child {
+      background-color: var(--p-bright-blue);
+      box-shadow: 0px 20px 5px 2px rgba(112, 112, 112, 0.157);
+      border-radius: 1rem;
+      color: white;
+
+      &:hover {
+        opacity: 0.8;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.wrapper {
+  max-width: 30rem;
+  margin: auto;
+}
+
+// 376px
+@media (min-width: 23.5em) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+  }
+
+  .card {
+    margin: 5rem 1.5rem;
+
+    &__summary {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        margin: 0rem 3rem;
+      }
+    }
+
+    &__plan {
+      padding: 1rem 1.5rem;
+    }
+
+    &__button {
+      button {
+        padding: 1rem 4.5rem;
+      }
+    }
+  }
+}
+
+// 429px
+@media (min-width: 26.8em) {
+  .card {
+    &__plan {
+      padding: 1rem 2.5rem;
+    }
+    &__button {
+      button {
+        padding: 1rem 6rem;
+      }
+    }
+  }
+}
